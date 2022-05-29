@@ -12,6 +12,8 @@ public class DiseaseAdapter extends BaseAdapter {
     private Context ctx;
     private DiseaseMyData[] data;
 
+
+
     public DiseaseAdapter(Context ctx, DiseaseMyData[] data){
         this.ctx = ctx;
         this.data = data;

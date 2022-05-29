@@ -8,6 +8,8 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
 
+import java.util.ArrayList;
+
 //main 이 diseaselist라고생각
 public class MainActivity extends AppCompatActivity {
 
@@ -31,15 +33,16 @@ public class MainActivity extends AppCompatActivity {
         mList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int position, long id) {
-                switch (data[position].name){
-                    case "수두":
-                        if(data[position].source.equals("종로구 보건소 관리자")){
+                switch (position){
+                    case 0:
                             Intent intent = new Intent(getApplicationContext(), DiseaseSuduS.class);
                             startActivity(intent);
-                        }else if(data[position].source.equals("과천시 보건소 관리자")){
-                            Intent intent = new Intent(getApplicationContext(), DiseaseSuduG.class);
-                            startActivity(intent);
-                        }
+                            break;
+                    case 1:
+                            Intent intent1 = new Intent(getApplicationContext(), DiseaseSuduG.class);
+                            startActivity(intent1);
+                            break;
+
                 }
 
             }
